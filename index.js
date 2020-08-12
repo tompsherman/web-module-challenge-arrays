@@ -58,7 +58,6 @@ Your function should add the flavor to the front of the array and console.log th
 For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */ 
 
 function addFlavor(/*code here*/){
-
     /*code here*/
 
 }
@@ -144,12 +143,18 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
-
+function filterByWord(arr, string){
+    let newArr = [];
+    for(let i=0; i<arr.length; i++){
+        if(arr[i].includes(string)){
+            newArr.push(arr[i])
+        }
+    }
     /*code here*/
-
+    return newArr;
 }
 
+console.log(filterByWord(originalFlavors, "Chocolate"));
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
